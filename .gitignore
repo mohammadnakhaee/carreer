@@ -1,0 +1,40 @@
+# Personal data — TRACKED in this fork (private backup of the job search).
+# Upstream career-ops ignores these; here they are committed on purpose.
+# Do NOT make this repository public.
+output/*
+!output/.gitkeep
+batch/logs/*
+!batch/logs/.gitkeep
+batch/batch-state.tsv
+batch/batch-input.tsv
+
+# Transient locks / state
+.update-dismissed
+.update-lock
+
+# Secrets (never commit — use .env.example as template)
+.env
+
+# Generated
+.resolved-prompt-*
+node_modules/
+bun.lock
+
+# OS
+.DS_Store
+*.mov
+*.mp4
+
+# Claude Code local
+.claude/settings.local.json
+.claude/memory/
+career-dashboard
+package-lock.json
+
+# Streamlit GUI
+streamlit_app/__pycache__/
+streamlit_app/static/
+.venv/
+.streamlit/secrets.toml
+.streamlit/pipeline-run.json
+.streamlit/pipeline-logs/

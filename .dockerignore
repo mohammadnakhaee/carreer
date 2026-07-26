@@ -1,0 +1,10 @@
+# Keep the build context small. These are provided at runtime via the volume
+# mount (docker-compose.yml), so excluding them here only speeds up the build.
+.git
+.venv
+**/__pycache__
+*.pyc
+.streamlit/pipeline-logs
+streamlit_app/static/output
+batch/logs
+node_modules

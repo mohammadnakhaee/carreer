@@ -1,0 +1,25 @@
+# career-ops GUI.
+#
+#   docker compose up --build      # build + run
+#   open http://localhost:8501
+#   docker compose down            # stop
+#
+services:
+  gui:
+    build: .
+    image: career-ops-gui
+    container_name: career-ops-gui
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount the whole project so the GUI reads/writes your real data and picks
+      # up code edits without a rebuild. Files the app writes (applications.md,
+      # data/pipeline.md, .streamlit/) persist on the host.
+      - ./:/app
+    environment:
+      - CAREER_OPS_LOG=INFO
+      - HOME=/tmp            # give Streamlit a writable home for its config
+    # Files the container writes are root-owned on the host by default. To keep
+    # them owned by you, uncomment and set to your host UID:GID (`id -u`/`id -g`):
+    # user: "1000:1000"
+    restart: unless-stopped

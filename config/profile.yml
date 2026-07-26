@@ -1,0 +1,73 @@
+# Career-Ops Profile Configuration
+# Single source of truth for personal data across all modes.
+
+candidate:
+  full_name: "Dr. Mohammad Nakhaee"
+  email: "mohammad.nakhaee.1@gmail.com"
+  phone: "+49 179 525 9268"
+  location: "Berlin, Germany"
+  linkedin: "linkedin.com/in/mohammad-nakhaee"
+  portfolio_url: "https://tight-binding.com"
+  github: "github.com/mohammadnakhaee"
+  scholar: "https://scholar.google.com/citations?user=WmP3jRIAAAAJ&hl=en"
+
+target_roles:
+  # North Star roles — what you're optimizing for
+  primary:
+    - "Full-Stack Engineer"
+    - "AI/LLM Engineer"
+    - "Scientific Software Engineer"
+    - "Frontend Developer"
+  # Archetypes help the evaluation system score fit
+  archetypes:
+    - name: "Full-Stack Engineer"
+      level: "Senior"
+      fit: "primary"        # primary = dream role, secondary = good fit, adjacent = stretch
+    - name: "AI/LLM Engineer"
+      level: "Mid-Senior"
+      fit: "primary"
+    - name: "Scientific / Research Software Engineer"
+      level: "Senior"
+      fit: "primary"
+    - name: "Frontend Developer (React/TypeScript)"
+      level: "Mid-Senior"
+      fit: "secondary"
+
+narrative:
+  # Professional headline (1 line)
+  headline: "Scientist & Full-Stack Developer bridging computational science, web platforms, and applied AI"
+  # Exit story — what makes you unique
+  exit_story: "PhD physicist who ships production software. 10+ years across C++, Python, and React — from quantum simulation engines to LLM-powered features on a large open research platform."
+  # Top superpowers
+  superpowers:
+    - "Full-stack across the whole stack: C++ engines, Python/FastAPI backends, React/TypeScript frontends"
+    - "Builds LLM/agentic features end-to-end (MCP servers, natural-language-to-query)"
+    - "Turns hard scientific/computational problems into usable software and visualization tools"
+    - "Ships cross-platform, deployable products (GitHub Actions, Docker, CI/CD)"
+  # Proof points — projects with measurable impact
+  proof_points:
+    - name: "Tight-Binding Studio (TBStudio)"
+      url: "https://tight-binding.com"
+      hero_metric: "Cross-platform C++ materials-simulation software (Win/Linux/macOS), OpenGL 3D viz"
+    - name: "NOMAD (FAIRmat, HU Berlin)"
+      url: "https://nomad-lab.eu"
+      hero_metric: "Contributed ELN framework + LLM natural-language search on a large open research platform"
+    - name: "GlobalGOP"
+      url: "https://global-gop.com"
+      hero_metric: "News + social platform with SSR/CSR, Telegram bot, and MCP-based AI assistant"
+
+compensation:
+  target_range: "€70K-100K"      # Target total comp (gross annual)
+  currency: "EUR"
+  minimum: "€70K"                # Walk-away number
+  location_flexibility: "Remote-only, hybrid in Berlin, or open to relocation — all acceptable"
+
+location:
+  country: "Germany"
+  city: "Berlin"
+  timezone: "Europe/Berlin"
+  visa_status: "Authorized to work in Germany/EU — no sponsorship needed"
+  relocation: "Open to relocation"
+
+cv:
+  output_format: "html" # "html" (default) or "latex"
